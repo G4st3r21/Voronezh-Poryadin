@@ -24,7 +24,7 @@ class MyWidget(QMainWindow):
             self.draw_cirlce(qp)
     
     def draw_cirlce(self, qp):
-        qp.setBrush(QColor(255, 255, 0))
+        qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
         self.radius = randint(0, self.height())
         self.x, self.y = randint(0, self.width()), randint(0, self.height())
         qp.drawEllipse(self.x - self.radius, self.y - self.radius, 2 * self.radius, 2 * self.radius)
